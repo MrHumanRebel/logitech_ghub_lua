@@ -2,21 +2,21 @@ EnablePrimaryMouseButtonEvents(true);
 r = {} -- vertical_control, horizontal_control
 --######################################
 
-attacker = "Hibana"
-defender = "Rook"
+attacker = "hibana"
+defender = "rook"
 
 --######################################
-r["Amaru"] = {-1,4}; r["Ash"] = {-1,7}; r["Blackbeard"] = {-1,4}; r["Brava"] = {-1,4}; r["Buck"] = {-1,4}; r["Capitao"] = {0,5}; r["Dokkaebi"] = {-1,4}
-r["Finka"] = {-1,4}; r["Flores"] = {-1,4}; r["Fuze"] = {-1,4}; r["Glaz"] = {-1,4}; r["Gridlock"] = {-1,4}; r["Grim"] = {-1,4}; r["Hibana"] = {-1,7}
-r["Iana"] = {-1,4}; r["IQ"] = {-1,4}; r["Jackal"] = {-1,4}; r["Kali"] = {-1,4}; r["Lion"] = {-1,4}; r["Maverick"] = {-1,5}; r["Nokk"] = {-1,4}
-r["Nomad"] = {-1,4}; r["Osa"] = {-1,4}; r["Sens"] = {-1,4}; r["Sledge"] = {-1,4}; r["Thatcher"] = {-1,4}; r["Thermite"] = {-1,4}; r["Twitch"] = {-1,10}
-r["Ying"] = {-1,4}; r["Zero"] = {-1,4}; r["Zofia"] = {-1,4}
+r["amaru"] = {-1,4}; r["ash"] = {-1,7}; r["blackbeard"] = {-1,4}; r["brava"] = {-1,4}; r["buck"] = {-1,4}; r["capitao"] = {0,5}; r["dokkaebi"] = {-1,4}
+r["finka"] = {-1,4}; r["flores"] = {-1,4}; r["fuze"] = {-1,4}; r["glaz"] = {-1,4}; r["gridlock"] = {-1,4}; r["grim"] = {-1,4}; r["hibana"] = {-1,7}
+r["iana"] = {-1,4}; r["iq"] = {-1,4}; r["jackal"] = {-1,4}; r["kali"] = {-1,4}; r["lion"] = {-1,4}; r["maverick"] = {-1,5}; r["nokk"] = {-1,4}
+r["nomad"] = {-1,4}; r["osa"] = {-1,4}; r["sens"] = {-1,4}; r["sledge"] = {-1,4}; r["thatcher"] = {-1,4}; r["thermite"] = {-1,4}; r["twitch"] = {-1,10}
+r["ying"] = {-1,4}; r["zero"] = {-1,4}; r["zofia"] = {-1,4}
 
-r["Alibi"] = {-1,4}; r["Aruni"] = {-1,4}; r["Azami"] = {-1,4}; r["Bandit"] = {0,6}; r["Castle"] = {-1,4}; r["Caveira"] = {-1,4}; r["Clash"] = {-1,4}
-r["Doc"] = {-1,4}; r["Echo"] = {-1,4}; r["Ela"] = {-1,4}; r["Fenrir"] = {-1,4}; r["Frost"] = {-1,4}; r["Goyo"] = {-1,4}; r["Jager"] = {-1,4}
-r["Kaid"] = {-1,4}; r["Kapkan"] = {-1,4}; r["Lesion"] = {-1,4}; r["Maestro"] = {-1,4}; r["Melusi"] = {-1,4}; r["Mira"] = {1,8}; r["Mozzie"] = {-1,4}
-r["Mute"] = {-1,4}; r["Oryx"] = {-1,4}; r["Pulse"] = {-1,4}; r["Rook"] = {-1,6}; r["Smoke"] = {-1,4}; r["Solis"] = {-1,4}; r["Tachanka"] = {-1,4}
-r["Thorn"] = {-1,4}; r["Thunderbird"] = {-1,4}; r["Valkyrie"] = {-1,4}; r["Vigil"] = {-1,4}; r["Wamai"] = {-1,4}; r["Warden"] = {-1,4}
+r["alibi"] = {-1,4}; r["aruni"] = {-1,4}; r["azami"] = {-1,4}; r["bandit"] = {0,6}; r["castle"] = {-1,4}; r["caveira"] = {-1,4}; r["clash"] = {-1,4}
+r["doc"] = {-1,4}; r["echo"] = {-1,4}; r["ela"] = {-1,4}; r["fenrir"] = {-1,4}; r["frost"] = {-1,4}; r["goyo"] = {-1,4}; r["jager"] = {-1,4}
+r["kaid"] = {-1,4}; r["kapkan"] = {-1,4}; r["lesion"] = {-1,4}; r["maestro"] = {-1,4}; r["melusi"] = {-1,4}; r["mira"] = {1,8}; r["mozzie"] = {-1,4}
+r["mute"] = {-1,4}; r["oryx"] = {-1,4}; r["pulse"] = {-1,4}; r["rook"] = {-1,6}; r["smoke"] = {-1,4}; r["solis"] = {-1,4}; r["tachanka"] = {-1,4}
+r["thorn"] = {-1,4}; r["thunderbird"] = {-1,4}; r["valkyrie"] = {-1,4}; r["vigil"] = {-1,4}; r["wamai"] = {-1,4}; r["warden"] = {-1,4}
 
 function OnEvent(event, arg)
       counter = 1;
