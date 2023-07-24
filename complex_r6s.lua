@@ -17,20 +17,27 @@ r["doc"] = {-1,4}; r["echo"] = {-1,4}; r["ela"] = {-1,4}; r["fenrir"] = {-1,4}; 
 r["kaid"] = {-1,4}; r["kapkan"] = {-1,4}; r["lesion"] = {-1,4}; r["maestro"] = {-1,4}; r["melusi"] = {-1,4}; r["mira"] = {1,8}; r["mozzie"] = {-1,4}
 r["mute"] = {-1,4}; r["oryx"] = {-1,4}; r["pulse"] = {-1,4}; r["rook"] = {-1,6}; r["smoke"] = {-1,4}; r["solis"] = {-1,4}; r["tachanka"] = {-1,4}
 r["thorn"] = {-1,4}; r["thunderbird"] = {-1,4}; r["valkyrie"] = {-1,4}; r["vigil"] = {-1,4}; r["wamai"] = {-1,4}; r["warden"] = {-1,4}
+--######################################
+
+mod = "alt"
+mod2 = "ctrl"
+
+function OperatorSelector(operator)
+  vertical_control = r[operator][1]
+  horizontal_control = r[operator][2]
+  OutputLogMessage(operator .. "\n")
+  OutputLogMessage(vertical_control .. "\n")
+  OutputLogMessage(horizontal_control .. "\n")
+  return vertical_control, horizontal_control
+end
 
 function OnEvent(event, arg)
       counter = 1;
-	if IsModifierPressed("alt") and IsMouseButtonPressed(1) then
-         operator = attacker
-         vertical_control = r[operator][1]
-         horizontal_control = r[operator][2]
-         OutputLogMessage(operator .. "\n")
+	if IsModifierPressed(mod) and IsModifierPressed(mod2) and IsMouseButtonPressed(1) then
+         vertical_control, horizontal_control = OperatorSelector(attacker)
 	end
-	if IsModifierPressed("alt") and IsMouseButtonPressed(3)then
-         operator = defender
-         vertical_control = r[operator][1]
-         horizontal_control = r[operator][2]
-         OutputLogMessage(operator .. "\n")
+	if IsModifierPressed(mod) and IsModifierPressed(mod2) and IsMouseButtonPressed(3)then
+         vertical_control, horizontal_control = OperatorSelector(defender)
 	end
 	if IsKeyLockOn("numlock") then
 		if IsMouseButtonPressed(3) then
