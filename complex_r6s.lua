@@ -20,7 +20,7 @@ r["finka"] = {-1,8}; r["flores"] = {0,4}; r["fuze"] = {-1,9};
 r["fenrir"] = {0,6}; r["frost"] = {0,4}; 
 r["glaz"] = {0,0}; r["gridlock"] = {-1,8}; r["grim"] = {-1,4};
 r["goyo"] = {-1,8};
-r["hibana"] = {-1,7};
+r["hibana"] = {-1,8};
 r["iana"] = {-1,4}; r["iq"] = {-1,4};
 r["jackal"] = {-1,8};
 r["jager"] = {-1,6};
@@ -37,7 +37,7 @@ r["pulse"] = {-1,3};
 r["rook"] = {-1,6};
 r["sens"] = {0,5}; r["sledge"] = {1,4};
 r["smoke"] = {1,7}; r["solis"] = {0,5};
-r["thatcher"] = {-1,7}; r["thermite"] = {1,6}; r["twitch"] = {-1,10};
+r["thatcher"] = {-1,7}; r["thermite"] = {1,6}; r["twitch"] = {-1,11};
 r["tachanka"] = {1,3}; r["thorn"] = {0,5}; r["thunder"] = {-1,7};
 r["valkyrie"] = {0,5}; r["vigil"] = {-1,6};
 r["ying"] = {-1,6};
@@ -48,45 +48,45 @@ r["wamai"] = {0,6}; r["warden"] = {-1,5};
 atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava"}
 deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
  
-selector_box_size = {2000, 6800} --xy "Each operator has this size of selector box"
+selector_box_size = {2038, 7653} --xy "Each operator has this size of selector box"
 -- Display coordinates
-up_left = {17224, 20347} --xy "Sledge from atts / Smoke from deffs"
-up_right = {31513, 20347} --xy "Glaz from atts / Kapkan from deffs"
-down_left = {17224, 58611} --xy "Zero from atts / Aruni from deffs"
+up_left = {17224, 20408} --xy "Sledge from atts / Smoke from deffs"
+up_right = {31496, 20286} --xy "Glaz from atts / Kapkan from deffs"
+down_left = {17207, 58672} --xy "Zero from atts / Aruni from deffs"
 down_right = {29498, 58611} --xy "Brava from atts / Fenrir from deffs"
 
 --######################################
 
 function OperatorSelector(operators)
     -- Select the appropriate operator based on mouse position, use selector_box_size and the display coordinates to navigate.
-    local x, y = GetMousePosition()
+    x, y = GetMousePosition()
     --OutputLogMessage(x .. "\n")
     --OutputLogMessage(y .. "\n")
 
-    local rows = 5  -- Number of rows of operators on the screen
-    local cols = 7  -- Number of columns of operators on the screen
+    rows = 5  -- Number of rows of operators on the screen
+    cols = 7  -- Number of columns of operators on the screen
 
     -- Calculate the number of operators in the last row
-    local last_row_operators = #operators % cols
+    last_row_operators = #operators % cols
 
     -- Default values for vertical and horizontal control
-    local vertical_control, horizontal_control = 0, 0
+    vertical_control, horizontal_control = 0, 0
 
     for i = 1, #operators do
-        local operator_index = i - 1
-        local row = operator_index // cols
-        local col = operator_index % cols
+        operator_index = i - 1
+        row = operator_index // cols
+        col = operator_index % cols
 
         -- Adjust the number of columns for the last row
         if row == rows - 1 and col >= last_row_operators then
             cols = last_row_operators
         end
 
-        local selector_x = up_left[1] + (col * selector_box_size[1])
-        local selector_y = up_left[2] + (row * selector_box_size[2])
+        selector_x = up_left[1] + (col * selector_box_size[1])
+        selector_y = up_left[2] + (row * selector_box_size[2])
 
         if x >= selector_x and x <= (selector_x + selector_box_size[1]) and y >= selector_y and y <= (selector_y + selector_box_size[2]) then
-            local operator = operators[i]
+            operator = operators[i]
             vertical_control, horizontal_control = r[operator][1], r[operator][2]  -- Update the vertical and horizontal control values for the selected operator
             OutputLogMessage(operator .. "\n")
             OutputLogMessage(vertical_control .. "\n")
