@@ -1,5 +1,12 @@
 EnablePrimaryMouseButtonEvents(true);
 --######################################
+
+mod = "alt"
+mod2 = "ctrl"
+mod3 = "scrolllock"
+
+--######################################
+
 r = {} -- vertical_control, horizontal_control
 r["amaru"] = {-1,9}; r["ash"] = {-1,7}; r["ace"] = {-1,6};
 r["alibi"] = {0,6}; r["aruni"] = {0,5}; r["azami"] = {-1,5};
@@ -36,14 +43,6 @@ r["valkyrie"] = {0,5}; r["vigil"] = {-1,6};
 r["ying"] = {-1,6};
 r["zero"] = {-1,5}; r["zofia"] = {0,6};  
 r["wamai"] = {0,6}; r["warden"] = {-1,5};
---######################################
-
-mod = "alt"
-mod2 = "ctrl"
-mod3 = "scrolllock"
-
---######################################
-
 
 -- Operators below are in order from left to right, there are 7 operators in one row
 atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava"}
@@ -99,8 +98,6 @@ function OperatorSelector(operators)
     -- Return the vertical and horizontal control values for the selected operator
     return vertical_control, horizontal_control
 end
-
-
 
 function OnEvent(event, arg)
       counter = 1;
