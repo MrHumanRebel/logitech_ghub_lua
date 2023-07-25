@@ -1,9 +1,6 @@
 EnablePrimaryMouseButtonEvents(true);
+--######################################
 r = {} -- vertical_control, horizontal_control
---######################################
-attacker = "hibana"
-defender = "fenrir"
---######################################
 r["amaru"] = {-1,9}; r["ash"] = {-1,7}; r["ace"] = {-1,6};
 r["alibi"] = {0,6}; r["aruni"] = {0,5}; r["azami"] = {-1,5};
 r["blackbeard"] = {1,3}; r["brava"] = {0,4}; r["buck"] = {-1,6};
@@ -46,22 +43,72 @@ mod2 = "ctrl"
 mod3 = "scrolllock"
 
 --######################################
-function OperatorSelector(operator)
-  vertical_control = r[operator][1]
-  horizontal_control = r[operator][2]
-  OutputLogMessage(operator .. "\n")
-  OutputLogMessage(vertical_control .. "\n")
-  OutputLogMessage(horizontal_control .. "\n")
-  return vertical_control, horizontal_control
+
+
+-- Operators below are in order from left to right, there are 7 operators in one row
+atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava"}
+deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
+ 
+selector_box_size = {2000, 6800} --xy "Each operator has this size of selector box"
+-- Display coordinates
+up_left = {17224, 20347} --xy "Sledge from atts / Smoke from deffs"
+up_right = {31513, 20347} --xy "Glaz from atts / Kapkan from deffs"
+down_left = {17224, 58611} --xy "Zero from atts / Aruni from deffs"
+down_right = {29498, 58611} --xy "Brava from atts / Fenrir from deffs"
+
+--######################################
+
+function OperatorSelector(operators)
+    -- Select the appropriate operator based on mouse position, use selector_box_size and the display coordinates to navigate.
+    local x, y = GetMousePosition()
+    --OutputLogMessage(x .. "\n")
+    --OutputLogMessage(y .. "\n")
+
+    local rows = 5  -- Number of rows of operators on the screen
+    local cols = 7  -- Number of columns of operators on the screen
+
+    -- Calculate the number of operators in the last row
+    local last_row_operators = #operators % cols
+
+    -- Default values for vertical and horizontal control
+    local vertical_control, horizontal_control = 0, 0
+
+    for i = 1, #operators do
+        local operator_index = i - 1
+        local row = operator_index // cols
+        local col = operator_index % cols
+
+        -- Adjust the number of columns for the last row
+        if row == rows - 1 and col >= last_row_operators then
+            cols = last_row_operators
+        end
+
+        local selector_x = up_left[1] + (col * selector_box_size[1])
+        local selector_y = up_left[2] + (row * selector_box_size[2])
+
+        if x >= selector_x and x <= (selector_x + selector_box_size[1]) and y >= selector_y and y <= (selector_y + selector_box_size[2]) then
+            local operator = operators[i]
+            vertical_control, horizontal_control = r[operator][1], r[operator][2]  -- Update the vertical and horizontal control values for the selected operator
+            OutputLogMessage(operator .. "\n")
+            OutputLogMessage(vertical_control .. "\n")
+            OutputLogMessage(horizontal_control .. "\n")
+            break  -- Exit the loop once an operator is found
+        end
+    end
+
+    -- Return the vertical and horizontal control values for the selected operator
+    return vertical_control, horizontal_control
 end
+
+
 
 function OnEvent(event, arg)
       counter = 1;
 	if IsModifierPressed(mod) and IsModifierPressed(mod2) and IsMouseButtonPressed(1) then
-         vertical_control, horizontal_control = OperatorSelector(attacker)
+         vertical_control, horizontal_control = OperatorSelector(atts)
 	end
 	if IsModifierPressed(mod) and IsModifierPressed(mod2) and IsMouseButtonPressed(3)then
-         vertical_control, horizontal_control = OperatorSelector(defender)
+         vertical_control, horizontal_control = OperatorSelector(deffs)
 	end
 	if IsKeyLockOn(mod3) then
 		if IsMouseButtonPressed(3) then
