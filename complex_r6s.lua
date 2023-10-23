@@ -50,18 +50,18 @@ deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka"
  
 selector_box_size = {2038, 7653} --xy "Each operator has this size of selector box"
 -- Display coordinates
-up_left = {17224, 20408} --xy "Sledge from atts / Smoke from deffs"
-up_right = {31496, 20286} --xy "Glaz from atts / Kapkan from deffs"
-down_left = {17207, 58672} --xy "Zero from atts / Aruni from deffs"
-down_right = {29498, 58611} --xy "Brava from atts / Fenrir from deffs"
+up_left = {17173, 12937} --xy "Sledge from atts / Smoke from deffs"
+up_right = {31530, 13119} --xy "Glaz from atts / Kapkan from deffs"
+down_left = {17173, 51505} --xy "Zero from atts / Aruni from deffs"
+down_right = {31530, 51566} --xy "Brava from atts / Fenrir from deffs"
 
 --######################################
 
 function OperatorSelector(operators)
     -- Select the appropriate operator based on mouse position, use selector_box_size and the display coordinates to navigate.
     x, y = GetMousePosition()
-    --OutputLogMessage(x .. "\n")
-    --OutputLogMessage(y .. "\n")
+    OutputLogMessage(x .. "\n")
+    OutputLogMessage(y .. "\n")
 
     rows = 5  -- Number of rows of operators on the screen
     cols = 7  -- Number of columns of operators on the screen
