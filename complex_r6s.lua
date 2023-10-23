@@ -34,7 +34,7 @@ r["nokk"] = {0,7}; r["nomad"] = {-1,6};
 r["osa"] = {2,3};
 r["oryx"] = {0,7};
 r["pulse"] = {-1,3};
-r["rook"] = {-1,6};
+r["rook"] = {-1,6}; r["ram"] = {-1,6};
 r["sens"] = {0,5}; r["sledge"] = {1,4};
 r["smoke"] = {1,7}; r["solis"] = {0,5};
 r["thatcher"] = {-1,7}; r["thermite"] = {1,6}; r["twitch"] = {-1,11};
@@ -44,8 +44,8 @@ r["ying"] = {-1,6};
 r["zero"] = {-1,5}; r["zofia"] = {0,6};  
 r["wamai"] = {0,6}; r["warden"] = {-1,5};
 
--- Operators below are in order from left to right, there are 7 operators in one row
-atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava"}
+-- Operators below are in order from left to right
+atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava", "ram"}
 deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
  
 selector_box_size = {2038, 7653} --xy "Each operator has this size of selector box"
