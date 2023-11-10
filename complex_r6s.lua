@@ -8,41 +8,42 @@ mod3 = "scrolllock"
 --######################################
 
 r = {} -- vertical_control, horizontal_control
-r["amaru"] = {-1,9}; r["ash"] = {-1,7}; r["ace"] = {-1,6};
-r["alibi"] = {0,6}; r["aruni"] = {0,5}; r["azami"] = {-1,5};
-r["blackbeard"] = {1,3}; r["brava"] = {0,4}; r["buck"] = {-1,6};
-r["bandit"] = {0,7};
-r["capitao"] = {0,5}; r["dokka"] = {0,3};
-r["castle"] = {0,3}; r["caveira"] = {0,3}; r["clash"] = {-1,4};
-r["doc"] = {-1,5};
-r["echo"] = {-1,5}; r["ela"] = {1,7};
-r["finka"] = {-1,8}; r["flores"] = {0,4}; r["fuze"] = {-1,9};
-r["fenrir"] = {0,6}; r["frost"] = {0,4}; 
-r["glaz"] = {0,0}; r["gridlock"] = {-1,8}; r["grim"] = {-1,4};
-r["goyo"] = {-1,8};
-r["hibana"] = {-1,8};
-r["iana"] = {-1,4}; r["iq"] = {-1,4};
-r["jackal"] = {-1,8};
-r["jager"] = {-1,6};
-r["kali"] = {-1,4};
-r["kaid"] = {0,6}; r["kapkan"] = {-1,6};
-r["lion"] = {0,6}; 
-r["lesion"] = {0,8};
-r["maverick"] = {-1,5};
-r["maestro"] = {0,7}; r["melusi"] = {-1,5}; r["mira"] = {-1,8}; r["mozzie"] = {0,5}; r["mute"] = {0,6};
-r["nokk"] = {0,7}; r["nomad"] = {-1,6}; 
-r["osa"] = {2,3};
-r["oryx"] = {0,7};
-r["pulse"] = {-1,3};
-r["rook"] = {-1,6}; r["ram"] = {-1,6};
-r["sens"] = {0,5}; r["sledge"] = {1,4};
-r["smoke"] = {1,7}; r["solis"] = {0,5};
-r["thatcher"] = {-1,7}; r["thermite"] = {1,6}; r["twitch"] = {-1,11};
-r["tachanka"] = {1,3}; r["thorn"] = {0,5}; r["thunder"] = {-1,7};
-r["valkyrie"] = {0,5}; r["vigil"] = {-1,6};
-r["ying"] = {-1,6};
-r["zero"] = {-1,5}; r["zofia"] = {0,6};  
-r["wamai"] = {0,6}; r["warden"] = {-1,5};
+r["amaru"] = {-1,7}; r["ash"] = {-1,5}; r["ace"] = {-1,4};
+r["alibi"] = {0,4}; r["aruni"] = {0,3}; r["azami"] = {-1,3};
+r["blackbeard"] = {1,1}; r["brava"] = {0,2}; r["buck"] = {-1,4};
+r["bandit"] = {0,5};
+r["capitao"] = {0,3}; r["dokka"] = {0,1};
+r["castle"] = {0,1}; r["caveira"] = {0,1}; r["clash"] = {-1,2};
+r["doc"] = {-1,3};
+r["echo"] = {-1,3}; r["ela"] = {1,5};
+r["finka"] = {-1,6}; r["flores"] = {0,2}; r["fuze"] = {-1,7};
+r["fenrir"] = {0,4}; r["frost"] = {0,2}; 
+r["glaz"] = {0,0}; r["gridlock"] = {-1,6}; r["grim"] = {-1,2};
+r["goyo"] = {-1,6};
+r["hibana"] = {-1,6};
+r["iana"] = {-1,2}; r["iq"] = {-1,2};
+r["jackal"] = {-1,6};
+r["jager"] = {-1,4};
+r["kali"] = {-1,2};
+r["kaid"] = {0,4}; r["kapkan"] = {-1,4};
+r["lion"] = {0,4}; 
+r["lesion"] = {0,6};
+r["maverick"] = {-1,3};
+r["maestro"] = {0,5}; r["melusi"] = {-1,3}; r["mira"] = {-1,6}; r["mozzie"] = {0,3}; r["mute"] = {0,4};
+r["nokk"] = {0,5}; r["nomad"] = {-1,4}; 
+r["osa"] = {2,1};
+r["oryx"] = {0,5};
+r["pulse"] = {-1,1};
+r["rook"] = {-1,4}; r["ram"] = {-1,4};
+r["sens"] = {0,3}; r["sledge"] = {1,2};
+r["smoke"] = {1,5}; r["solis"] = {0,3};
+r["thatcher"] = {-1,5}; r["thermite"] = {1,4}; r["twitch"] = {-1,9};
+r["tachanka"] = {1,1}; r["thorn"] = {0,3}; r["thunder"] = {-1,5};
+r["valkyrie"] = {0,3}; r["vigil"] = {-1,4};
+r["ying"] = {-1,4};
+r["zero"] = {-1,3}; r["zofia"] = {0,4};  
+r["wamai"] = {0,4}; r["warden"] = {-1,3};
+
 
 -- Operators below are in order from left to right
 atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava", "ram"}
@@ -50,10 +51,10 @@ deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka"
  
 selector_box_size = {2038, 7653} --xy "Each operator has this size of selector box"
 -- Display coordinates
-up_left = {17173, 12937} --xy "Sledge from atts / Smoke from deffs"
-up_right = {31530, 13119} --xy "Glaz from atts / Kapkan from deffs"
-down_left = {17173, 51505} --xy "Zero from atts / Aruni from deffs"
-down_right = {31530, 51566} --xy "Brava from atts / Fenrir from deffs"
+up_left = {17173, 12937}
+--up_right = {31530, 13119} -- Not needed anymore
+--down_left = {17173, 51505}
+--down_right = {31530, 51566}
 
 --######################################
 
