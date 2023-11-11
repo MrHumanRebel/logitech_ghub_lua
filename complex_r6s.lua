@@ -38,7 +38,7 @@ mod3 = "scrolllock"
 --######################################
 
 r = {
-    amaru = {-1, 6}, ash = {-1, 4}, ace = {-1, 3},
+    amaru = {-1, 4}, ash = {-1, 4}, ace = {-1, 3},
     alibi = {0, 3}, aruni = {0, 2}, azami = {-1, 2},
     blackbeard = {1, 0}, brava = {0, 1}, buck = {-1, 3},
     bandit = {0, 4},
@@ -142,7 +142,7 @@ function OnEvent(event, arg)
             if IsMouseButtonPressed(1) then
                 repeat
                     MoveMouseRelative(0, horizontal_control)
-                    counter = counter + 1
+                    counter = counter + 0.5
                     FastSleep(6.5) -- In milliseconds
                     if counter % 2 == 0 then
                         MoveMouseRelative(vertical_control, 0)
