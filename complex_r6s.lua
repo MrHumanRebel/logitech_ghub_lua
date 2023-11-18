@@ -48,7 +48,7 @@ r = {
     echo = {-1, 2}, ela = {1, 4},
     finka = {-1, 5}, flores = {0, 1}, fuze = {-1, 6},
     fenrir = {0, 3}, frost = {0, 1},
-    glaz = {0, -1}, gridlock = {-1, 5}, grim = {-1, 1},
+    glaz = {0, -1}, gridlock = {-1, 3}, grim = {-1, 1},
     goyo = {-1, 5},
     hibana = {-1, 3},
     iana = {-1, 1}, iq = {-1, 1},
@@ -59,7 +59,7 @@ r = {
     lion = {0, 3},
     lesion = {0, 5},
     maverick = {-1, 2},
-    maestro = {0, 4}, melusi = {-1, 2}, mira = {-1, 5}, mozzie = {0, 2}, mute = {0, 3},
+    maestro = {0, 3}, melusi = {-1, 2}, mira = {-1, 5}, mozzie = {0, 2}, mute = {0, 3},
     nokk = {0, 4}, nomad = {-1, 3},
     osa = {2, 0},
     oryx = {0, 4},
@@ -80,11 +80,11 @@ r = {
 atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava", "ram"}
 deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
  
--- selector_box_size = {2038, 7653} -- Samsung
+--selector_box_size = {2038, 7653} -- Samsung
 selector_box_size = {4194, 7458} -- G14
 
--- up_left = {17173, 12937} --Samsung
-up_left = {1601, 20441} --G14
+--up_left = {17173, 12937} --Samsung
+up_left = {1601, 13039} --G14
 
 --######################################
 
@@ -143,7 +143,7 @@ function OnEvent(event, arg)
                 repeat
                     MoveMouseRelative(0, horizontal_control)
                     counter = counter + 0.5
-                    FastSleep(6.5) -- In milliseconds
+                    FastSleep(8) -- In milliseconds
                     if counter % 2 == 0 then
                         MoveMouseRelative(vertical_control, 0)
                     end
