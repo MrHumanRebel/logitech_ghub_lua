@@ -127,7 +127,8 @@ function OperatorSelector(operators)
 end
 
 function OnEvent(event, arg)
-    local counter = 1
+    local horizontal_counter = 0
+    local vertical_counter = 0
 
     if IsModifierPressed(mod) and IsModifierPressed(mod2) then
         if IsMouseButtonPressed(1) then
@@ -142,13 +143,17 @@ function OnEvent(event, arg)
             if IsMouseButtonPressed(1) then
                 repeat
                     FastSleep(8) -- In milliseconds
-                    MoveMouseRelative(0, horizontal_control)
-                    counter = counter + 0.5
-                    if counter % 2 == 0 then
+                    if horizontal_counter > 5 then -- Prevent if tipping
+                      MoveMouseRelative(0, horizontal_control)
+                    end
+                    if vertical_counter % 2 == 0 then -- Just slight control
                         MoveMouseRelative(vertical_control, 0)
                     end
+                    horizontal_counter = horizontal_counter + 1
+                    vertical_counter = vertical_counter + 0.25
                 until not IsMouseButtonPressed(1)
-                counter = 1
+                horizontal_counter = 0
+                vertical_counter = 0
             end
         end
     end
