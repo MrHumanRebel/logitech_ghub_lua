@@ -46,7 +46,7 @@ r = {
     castle = {0, 0}, caveira = {0, 0}, clash = {-1, 1},
     doc = {-1, 2},
     echo = {-1, 2}, ela = {1, 4},
-    finka = {-1, 5}, flores = {0, 1}, fuze = {-1, 6},
+    finka = {-1, 5}, flores = {0, 1}, fuze = {-1, 3},
     fenrir = {0, 3}, frost = {0, 1},
     glaz = {0, -1}, gridlock = {-1, 3}, grim = {-1, 1},
     goyo = {-1, 5},
@@ -141,9 +141,9 @@ function OnEvent(event, arg)
         while IsMouseButtonPressed(3) do
             if IsMouseButtonPressed(1) then
                 repeat
+                    FastSleep(8) -- In milliseconds
                     MoveMouseRelative(0, horizontal_control)
                     counter = counter + 0.5
-                    FastSleep(8) -- In milliseconds
                     if counter % 2 == 0 then
                         MoveMouseRelative(vertical_control, 0)
                     end
