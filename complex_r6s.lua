@@ -45,7 +45,7 @@ r = {
     capitao = {0, 2}, dokka = {0, 0},
     castle = {0, 0}, caveira = {0, 0}, clash = {-1, 1},
     doc = {-1, 2},
-    echo = {-1, 2}, ela = {1, 4},
+    echo = {-1, 2}, ela = {1, 3},
     finka = {-1, 5}, flores = {0, 1}, fuze = {-1, 3},
     fenrir = {0, 3}, frost = {0, 1},
     glaz = {0, -1}, gridlock = {-1, 3}, grim = {-1, 1},
@@ -64,10 +64,10 @@ r = {
     osa = {2, 0},
     oryx = {0, 4},
     pulse = {-1, 0},
-    rook = {-1, 3}, ram = {-1, 3},
+    rook = {-1, 2}, ram = {-1, 3},
     sens = {0, 2}, sledge = {1, 1},
     smoke = {1, 4}, solis = {0, 2},
-    thatcher = {-1, 4}, thermite = {1, 3}, twitch = {-1, 8},
+    thatcher = {-1, 4}, thermite = {1, 3}, twitch = {-1, 4},
     tachanka = {1, 0}, thorn = {0, 2}, thunder = {-1, 4},
     valkyrie = {0, 2}, vigil = {-1, 3},
     ying = {-1, 3},
@@ -81,18 +81,18 @@ atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "
 deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
  
 --selector_box_size = {2038, 7653} -- Samsung
-selector_box_size = {4194, 7458} -- G14
+selector_box_size = {3585, 7230} -- G14
 
 --up_left = {17173, 12937} --Samsung
-up_left = {1601, 13039} --G14
+up_left = {1633, 20270} --G14
 
 --######################################
 
 function OperatorSelector(operators)
     local x, y = GetMousePosition()
     
-    OutputLogMessage(x .. " Currently \n")
-    OutputLogMessage(y .. " Currently \n")
+    OutputLogMessage(x .. " :X \n")
+    OutputLogMessage(y .. " :Y \n")
 
     local rows = 5  -- Number of rows of operators on the screen
     local cols = 7  -- Number of columns of operators on the screen
@@ -142,15 +142,15 @@ function OnEvent(event, arg)
         while IsMouseButtonPressed(3) do
             if IsMouseButtonPressed(1) then
                 repeat
-                    FastSleep(8) -- In milliseconds
-                    if horizontal_counter > 5 then -- Prevent if tipping
+                    if horizontal_counter > 2 then -- Prevent if tipping
                       MoveMouseRelative(0, horizontal_control)
                     end
                     if vertical_counter % 2 == 0 then -- Just slight control
                         MoveMouseRelative(vertical_control, 0)
                     end
                     horizontal_counter = horizontal_counter + 1
-                    vertical_counter = vertical_counter + 0.25
+                    vertical_counter = vertical_counter + 0.5
+                    FastSleep(6.75) -- In milliseconds
                 until not IsMouseButtonPressed(1)
                 horizontal_counter = 0
                 vertical_counter = 0
