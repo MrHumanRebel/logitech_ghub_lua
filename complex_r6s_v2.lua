@@ -12,81 +12,81 @@ selectorBoxSize = {(12011-topLeftCorner[1]), (25813-topLeftCorner[2])} -- LG
 --######################################
 
 recoilpresets = {
-    {description = "sledge", strength = 8, horizontalstrength = 1, duration = 2550},--1.5,comp,vertgrip
-    {description = "thatcher", strength = 9, horizontalstrength = 0, duration = 2400},--1.5,comp,vertgrip
-    {description = "ash", strength = 8, horizontalstrength = -1, duration = 2100},--holo,comp,vert
-    {description = "thermite", strength = 8, horizontalstrength = 1, duration = 2480},--1.5,comp,vergrip
-    {description = "twitch", strength = 20, horizontalstrength = -1, duration = 1558},--1.5,comp
+    {description = "sledge", strength = 2, horizontalstrength = 1, duration = 2550},
+    {description = "thatcher", strength = 2, horizontalstrength = 0, duration = 2400},
+    {description = "ash", strength = 2, horizontalstrength = -1, duration = 2100},
+    {description = "thermite", strength = 2, horizontalstrength = 1, duration = 2480},
+    {description = "twitch", strength = 5, horizontalstrength = -1, duration = 1558},
     {description = "montagne", strength = 0, horizontalstrength = 0, duration = 0},
     {description = "glaz", strength = 0, horizontalstrength = 0, duration = 0},
-    {description = "fuze", strength = 15, horizontalstrength = -1, duration = 2100},--2x,comp,vertgrip
+    {description = "fuze", strength = 4, horizontalstrength = -1, duration = 2100},
     {description = "blitz", strength = 0, horizontalstrength = 0, duration = 0},
-    {description = "iq", strength = 12, horizontalstrength = 1, duration = 2300},
-    {description = "buck", strength = 11, horizontalstrength = 0, duration = 2000},
-    {description = "blackbeard", strength = 4, horizontalstrength = 1, duration = 1700},
-    {description = "capitao", strength = 11, horizontalstrength = 0, duration = 2580},--2x,comp,vert
-    {description = "hibana", strength = 16, horizontalstrength = -1, duration = 1400},
-    {description = "jackal", strength = 13, horizontalstrength = -1, duration = 2300},--1.5,comp ,vertgrip
-    {description = "ying", strength = 11, horizontalstrength = 0, duration = 7500},--2x,comp,vertgrip
-    {description = "zofia", strength = 14, horizontalstrength = 1, duration = 2600},--2x,comp,vertgrip
-    {description = "dokkaebi", strength = 0, horizontalstrength = 0, duration = 0},--reddot,vertgrip
-    {description = "lion", strength = 9, horizontalstrength = 0, duration = 4230},--1.5,suppressor,vertgrip
-    {description = "finka", strength = 12, horizontalstrength = -1, duration = 2620}, --1.5,extended barrel,vertgrip
-    {description = "maverick", strength = 11, horizontalstrength = -1, duration = 2400},--2x,flash,vertgrip
-    {description = "nomad", strength = 11, horizontalstrength = -1, duration = 5000},
-    {description = "gridlock", strength = 12, horizontalstrength = -1, duration = 2265},--2x,comp,vertgrip
-    {description = "nokk", strength = 8, horizontalstrength = 0, duration = 5000},
-    {description = "amaru", strength = 13, horizontalstrength = -1, duration = 3550}, --1.5,silence,forgrip
-    {description = "kali", strength = 0, horizontalstrength = 0, duration = 0},--reflex,extended barrel 
-    {description = "iana", strength = 5, horizontalstrength = -1, duration = 5200},
-    {description = "ace", strength = 12, horizontalstrength = -1, duration = 2080},--1.5,suppressor,vertgrip
-    {description = "zero", strength = 15, horizontalstrength = -1, duration = 1860}, --2x,suppressor,vertgrip
-    {description = "flores", strength = 11, horizontalstrength = 0, duration = 5800},
-    {description = "osa", strength = 7, horizontalstrength = 2, duration = 2630},--1.5,suppressor,vertgrip
-    {description = "sens", strength = 16, horizontalstrength = 0, duration = 5000},
-    {description = "grim", strength = 9, horizontalstrength = 0, duration = 2600},--1.5,comp,vertgrip
-    {description = "brava", strength = 9, horizontalstrength = 0, duration = 5800},
-    {description = "ram", strength = 17, horizontalstrength = -1, duration = 5000},
+    {description = "iq", strength = 3, horizontalstrength = 1, duration = 2300},
+    {description = "buck", strength = 3, horizontalstrength = 0, duration = 2000},
+    {description = "blackbeard", strength = 1, horizontalstrength = 1, duration = 1700},
+    {description = "capitao", strength = 3, horizontalstrength = 0, duration = 2580},
+    {description = "hibana", strength = 4, horizontalstrength = -1, duration = 1400},
+    {description = "jackal", strength = 4, horizontalstrength = -1, duration = 2300},
+    {description = "ying", strength = 3, horizontalstrength = 0, duration = 7500},
+    {description = "zofia", strength = 4, horizontalstrength = 1, duration = 2600},
+    {description = "dokkaebi", strength = 0, horizontalstrength = 0, duration = 0},
+    {description = "lion", strength = 2, horizontalstrength = 0, duration = 4230},
+    {description = "finka", strength = 3, horizontalstrength = -1, duration = 2620},
+    {description = "maverick", strength = 3, horizontalstrength = -1, duration = 2400},
+    {description = "nomad", strength = 3, horizontalstrength = -1, duration = 5000},
+    {description = "gridlock", strength = 3, horizontalstrength = -1, duration = 2265},
+    {description = "nokk", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "amaru", strength = 4, horizontalstrength = -1, duration = 3550},
+    {description = "kali", strength = 0, horizontalstrength = 0, duration = 0},
+    {description = "iana", strength = 1, horizontalstrength = -1, duration = 5200},
+    {description = "ace", strength = 3, horizontalstrength = -1, duration = 2080},
+    {description = "zero", strength = 4, horizontalstrength = -1, duration = 1860},
+    {description = "flores", strength = 3, horizontalstrength = 0, duration = 5800},
+    {description = "osa", strength = 2, horizontalstrength = 2, duration = 2630},
+    {description = "sens", strength = 4, horizontalstrength = 0, duration = 5000},
+    {description = "grim", strength = 2, horizontalstrength = 0, duration = 2600},
+    {description = "brava", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "ram", strength = 4, horizontalstrength = -1, duration = 5000},
     --######################################
-    {description = "smoke", strength = 11, horizontalstrength = 0, duration = 5000},
-    {description = "mute", strength = 7, horizontalstrength = 0, duration = 5500},
-    {description = "castle", strength = 6, horizontalstrength = 0, duration = 2540}, --1.5,comp,vertgrip
-    {description = "pulse", strength = 6, horizontalstrength = 0, duration = 5800},
-    {description = "doc", strength = 11, horizontalstrength = 0, duration = 2260}, --1.5,comp,vertgrip 
-    {description = "rook", strength = 11, horizontalstrength = 0, duration = 2260}, --1.5,comp,vertgrip 
-    {description = "kapkan", strength = 6, horizontalstrength = 0, duration = 5000},
-    {description = "tachanka 9x19vsn", strength = 10, horizontalstrength = -1, duration = 2500},-- 2x,flash,vert
-    {description = "tachanka dp27", strength = 3, horizontalstrength = 0, duration = 7950}, -- reddot
-    {description = "jager", strength = 7, horizontalstrength = 0, duration = 5800},
-    {description = "bandit", strength = 8, horizontalstrength = 0, duration = 5800},
-    {description = "frost", strength = 6, horizontalstrength = 0, duration = 5800},
-    {description = "valkyrie", strength = 6, horizontalstrength = 0, duration = 5800},
-    {description = "caveira", strength = 4, horizontalstrength = 0, duration = 3260}, --holo,comp
-    {description = "echo", strength = 10, horizontalstrength = -1, duration = 5800},
-    {description = "mira", strength = 8, horizontalstrength = 0, duration = 5800},
-    {description = "lesion", strength = 7, horizontalstrength = 0, duration = 5000},
-    {description = "ela", strength = 9, horizontalstrength = 1, duration = 2210}, --reddot,comp,vertgrip
-    {description = "vigil", strength = 6, horizontalstrength = 0, duration = 5000},
-    {description = "maestro", strength = 8, horizontalstrength = 0, duration = 5400},--reddot,comp,vertgrip
-    {description = "maestro acs", strength = 5, horizontalstrength = 0, duration = 6200},--1.5,vertgrip
-    {description = "alibi", strength = 7, horizontalstrength = 0, duration = 5800},
-    {description = "clash sps", strength = 7, horizontalstrength = 0, duration = 1200},--reddot,comp,laser
-    {description = "kaid", strength = 5, horizontalstrength = 0, duration = 2860},--reddot,extend barrel,vertgrip
-    {description = "mozzie commando 9", strength = 6, horizontalstrength = 0, duration = 5800},
-    {description = "mozzie p10", strength = 11, horizontalstrength = 0, duration = 5800},
-    {description = "warden", strength = 10, horizontalstrength = 0, duration = 2100},--1.5,comp ,vertgrip
-    {description = "goyo", strength = 14, horizontalstrength = 0, duration = 1250}, --1.5,extended,vert 
-    {description = "wamai aug a2", strength = 8, horizontalstrength = 0, duration = 5000},
-    {description = "wamai mp5k", strength = 13, horizontalstrength = 0, duration = 5000},
-    {description = "oryx", strength = 7, horizontalstrength = 0, duration = 2080}, --reddot,extended barrel,vertgrip
-    {description = "melusi", strength = 6, horizontalstrength = 0, duration = 5800},
-    {description = "aruni", strength = 7, horizontalstrength = 0, duration = 5800},
-    {description = "thunderbird", strength = 8, horizontalstrength = 0, duration = 5000},
-    {description = "thorn", strength = 10, horizontalstrength = 0, duration = 1960}, --1.5,extended barrel,vert grip
-    {description = "azami", strength = 6, horizontalstrength = 0, duration = 2420},--holo,comp,vertgrip
-    {description = "solis", strength = 8, horizontalstrength = 0, duration = 5000},
-    {description = "fenrir", strength = 8, horizontalstrength = 0, duration = 2010}, --reddot,extended barrel
-    {description = "tubaro", strength = 6, horizontalstrength = 0, duration = 2200},--reddot,extended barrel ,forgrip
+    {description = "smoke", strength = 3, horizontalstrength = 0, duration = 5000},
+    {description = "mute", strength = 2, horizontalstrength = 0, duration = 5500},
+    {description = "castle", strength = 2, horizontalstrength = 0, duration = 2540},
+    {description = "pulse", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "doc", strength = 3, horizontalstrength = 0, duration = 2260},
+    {description = "rook", strength = 3, horizontalstrength = 0, duration = 2260},
+    {description = "kapkan", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "tachanka 9x19vsn", strength = 2, horizontalstrength = -1, duration = 2500},
+    {description = "tachanka dp27", strength = 1, horizontalstrength = 0, duration = 7950},
+    {description = "jager", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "bandit", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "frost", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "valkyrie", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "caveira", strength = 1, horizontalstrength = 0, duration = 3260},
+    {description = "echo", strength = 2, horizontalstrength = -1, duration = 5800},
+    {description = "mira", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "lesion", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "ela", strength = 2, horizontalstrength = 1, duration = 2210},
+    {description = "vigil", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "maestro", strength = 2, horizontalstrength = 0, duration = 5400},
+    {description = "maestro acs", strength = 1, horizontalstrength = 0, duration = 6200},
+    {description = "alibi", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "clash sps", strength = 2, horizontalstrength = 0, duration = 1200},
+    {description = "kaid", strength = 1, horizontalstrength = 0, duration = 2860},
+    {description = "mozzie commando 9", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "mozzie p10", strength = 3, horizontalstrength = 0, duration = 5800},
+    {description = "warden", strength = 3, horizontalstrength = 0, duration = 2100},
+    {description = "goyo", strength = 4, horizontalstrength = 0, duration = 1250},
+    {description = "wamai aug a2", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "wamai mp5k", strength = 3, horizontalstrength = 0, duration = 5000},
+    {description = "oryx", strength = 2, horizontalstrength = 0, duration = 2080},
+    {description = "melusi", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "aruni", strength = 2, horizontalstrength = 0, duration = 5800},
+    {description = "thunderbird", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "thorn", strength = 3, horizontalstrength = 0, duration = 1960},
+    {description = "azami", strength = 1, horizontalstrength = 0, duration = 2420},
+    {description = "solis", strength = 2, horizontalstrength = 0, duration = 5000},
+    {description = "fenrir", strength = 2, horizontalstrength = 0, duration = 2010},
+    {description = "tubaro", strength = 1, horizontalstrength = 0, duration = 2200},
 }
 --######################################
 
@@ -101,11 +101,14 @@ local startTime = 0
 local selectedOperator = nil
 
 --######################################
-
+-- Operator Selector Function
 function OperatorSelector(operators)
     local x, y = GetMousePosition()
     selectedOperator = nil
     selectedRecoil = nil
+
+    OutputLogMessage(x .. " :X \n")
+    OutputLogMessage(y .. " :Y \n")
 
     local rows = 5  -- Number of rows of operators on the screen
     local cols = 7  -- Number of columns of operators on the screen
@@ -124,45 +127,36 @@ function OperatorSelector(operators)
 
         local selector_x = topLeftCorner[1] + (selectorBoxSize[1] * col)
         local selector_y = topLeftCorner[2] + (selectorBoxSize[2] * row)
-
-        local isInsideSelector = x >= selector_x and x <= selector_x + selectorBoxSize[1] and y >= selector_y and y <= selector_y + selectorBoxSize[2]
-
-        if isInsideSelector then
+        if x >= selector_x and x <= selector_x + selectorBoxSize[1] and y >= selector_y and y <= selector_y + selectorBoxSize[2] then
             selectedOperator = operators[i]
             -- Find the recoil preset for the selected operator
-            local selectedRecoilIndex = 0
             for j, recoilpreset in ipairs(recoilpresets) do
                 if recoilpreset.description == selectedOperator then
                     selectedRecoil = recoilpreset
-                    selectedRecoilIndex = j
+                    OutputLogMessage
+                    (
+                        "Operator: " .. selectedRecoil.description .. "\n" ..
+                        "Strength: " .. selectedRecoil.strength .. "\n" ..
+                        "Horizontal Strength: " .. selectedRecoil.horizontalstrength .. "\n" ..
+                        "Duration: " .. selectedRecoil.duration .. "\n"
+                    )
                     break
                 end
             end
-
-            OutputLogMessage
-            (
-                "Operator: " .. selectedRecoil.description .. "\n" ..
-                "Strength: " .. selectedRecoil.strength .. "\n" ..
-                "Horizontal Strength: " .. selectedRecoil.horizontalstrength .. "\n" ..
-                "Duration: " .. selectedRecoil.duration .. "\n"
-            )
-
-            return selectedRecoil, selectedRecoilIndex
+            return selectedRecoil
         end
     end
-
-    return nil, nil
+    return nil
 end
 
 --######################################
 
 function OnEvent(event, arg)
     if IsModifierPressed("alt") and IsModifierPressed("ctrl") then
-        local isLeftMouseButtonPressed = IsMouseButtonPressed(1)
-        local isRightMouseButtonPressed = IsMouseButtonPressed(3)
-
-        if isLeftMouseButtonPressed or isRightMouseButtonPressed then
-            selectedOperator, selectedRecoilIndex = OperatorSelector(isLeftMouseButtonPressed and attackers or defenders)
+        if IsMouseButtonPressed(1) then
+            selectedOperator = OperatorSelector(attackers)
+        elseif IsMouseButtonPressed(3) then
+            selectedOperator = OperatorSelector(defenders)
         end
     end
 
@@ -173,7 +167,13 @@ function OnEvent(event, arg)
 
         -- Adjust strength based on scope multiplier
         local selectedScopeMultiplier = "+2"  -- Assuming a default value; adjust as needed
-        adjustedStrength = adjustedStrength + tonumber(string.match(selectedScopeMultiplier, "%d"))
+        if selectedScopeMultiplier == "+2" then
+            adjustedStrength = adjustedStrength + 2
+        elseif selectedScopeMultiplier == "+4" then
+            adjustedStrength = adjustedStrength + 4
+        elseif selectedScopeMultiplier == "+6" then
+            adjustedStrength = adjustedStrength + 6
+        end
 
         if IsKeyLockOn("scrolllock") then
             while IsMouseButtonPressed(3) do
