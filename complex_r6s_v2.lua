@@ -101,14 +101,11 @@ local startTime = 0
 local selectedOperator = nil
 
 --######################################
--- Operator Selector Function
+
 function OperatorSelector(operators)
     local x, y = GetMousePosition()
     selectedOperator = nil
     selectedRecoil = nil
-
-    OutputLogMessage(x .. " :X \n")
-    OutputLogMessage(y .. " :Y \n")
 
     local rows = 5  -- Number of rows of operators on the screen
     local cols = 7  -- Number of columns of operators on the screen
@@ -127,36 +124,45 @@ function OperatorSelector(operators)
 
         local selector_x = topLeftCorner[1] + (selectorBoxSize[1] * col)
         local selector_y = topLeftCorner[2] + (selectorBoxSize[2] * row)
-        if x >= selector_x and x <= selector_x + selectorBoxSize[1] and y >= selector_y and y <= selector_y + selectorBoxSize[2] then
+
+        local isInsideSelector = x >= selector_x and x <= selector_x + selectorBoxSize[1] and y >= selector_y and y <= selector_y + selectorBoxSize[2]
+
+        if isInsideSelector then
             selectedOperator = operators[i]
             -- Find the recoil preset for the selected operator
+            local selectedRecoilIndex = 0
             for j, recoilpreset in ipairs(recoilpresets) do
                 if recoilpreset.description == selectedOperator then
                     selectedRecoil = recoilpreset
-                    OutputLogMessage
-                    (
-                        "Operator: " .. selectedRecoil.description .. "\n" ..
-                        "Strength: " .. selectedRecoil.strength .. "\n" ..
-                        "Horizontal Strength: " .. selectedRecoil.horizontalstrength .. "\n" ..
-                        "Duration: " .. selectedRecoil.duration .. "\n"
-                    )
+                    selectedRecoilIndex = j
                     break
                 end
             end
-            return selectedRecoil
+
+            OutputLogMessage
+            (
+                "Operator: " .. selectedRecoil.description .. "\n" ..
+                "Strength: " .. selectedRecoil.strength .. "\n" ..
+                "Horizontal Strength: " .. selectedRecoil.horizontalstrength .. "\n" ..
+                "Duration: " .. selectedRecoil.duration .. "\n"
+            )
+
+            return selectedRecoil, selectedRecoilIndex
         end
     end
-    return nil
+
+    return nil, nil
 end
 
 --######################################
 
 function OnEvent(event, arg)
     if IsModifierPressed("alt") and IsModifierPressed("ctrl") then
-        if IsMouseButtonPressed(1) then
-            selectedOperator = OperatorSelector(attackers)
-        elseif IsMouseButtonPressed(3) then
-            selectedOperator = OperatorSelector(defenders)
+        local isLeftMouseButtonPressed = IsMouseButtonPressed(1)
+        local isRightMouseButtonPressed = IsMouseButtonPressed(3)
+
+        if isLeftMouseButtonPressed or isRightMouseButtonPressed then
+            selectedOperator, selectedRecoilIndex = OperatorSelector(isLeftMouseButtonPressed and attackers or defenders)
         end
     end
 
@@ -167,13 +173,7 @@ function OnEvent(event, arg)
 
         -- Adjust strength based on scope multiplier
         local selectedScopeMultiplier = "+2"  -- Assuming a default value; adjust as needed
-        if selectedScopeMultiplier == "+2" then
-            adjustedStrength = adjustedStrength + 2
-        elseif selectedScopeMultiplier == "+4" then
-            adjustedStrength = adjustedStrength + 4
-        elseif selectedScopeMultiplier == "+6" then
-            adjustedStrength = adjustedStrength + 6
-        end
+        adjustedStrength = adjustedStrength + tonumber(string.match(selectedScopeMultiplier, "%d"))
 
         if IsKeyLockOn("scrolllock") then
             while IsMouseButtonPressed(3) do
