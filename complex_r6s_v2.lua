@@ -91,8 +91,8 @@ recoilpresets = {
 --######################################
 
 -- Operators below are in order from left to right
-atts = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava", "ram"}
-deffs = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
+attackers = {"sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", "brava", "ram"}
+defenders = {"smoke", "mute", "castle", "pulse", "doc", "rook", "kapkan", "tachanka", "jager", "bandit", "frost", "valkyrie", "caveira", "echo", "mira", "lesion", "ela", "vigil", "maestro", "alibi", "clash", "kaid", "mozzie", "warden", "goyo", "wamai", "oryx", "melusi", "aruni", "thunderbird", "thorn", "azami", "solis", "fenrir"}
  
 --######################################
 
@@ -105,6 +105,7 @@ local selectedOperator = nil
 function OperatorSelector(operators)
     local x, y = GetMousePosition()
     selectedOperator = nil
+    selectedRecoil = nil
 
     OutputLogMessage(x .. " :X \n")
     OutputLogMessage(y .. " :Y \n")
@@ -126,16 +127,23 @@ function OperatorSelector(operators)
 
         local selector_x = topLeftCorner[1] + (selectorBoxSize[1] * col)
         local selector_y = topLeftCorner[2] + (selectorBoxSize[2] * row)
-
         if x >= selector_x and x <= selector_x + selectorBoxSize[1] and y >= selector_y and y <= selector_y + selectorBoxSize[2] then
-            if operator.description == selectedOperator then
-                selectedOperator = recoilpresets[i]
-                OutputLogMessage(selectedOperator.description .. "\t")
-                OutputLogMessage(selectedOperator.strength .. "\t")
-                OutputLogMessage(selectedOperator.horizontalstrength .. "\t")
-                OutputLogMessage(selectedOperator.duration .. "\n")
-                return selectedOperator
+            selectedOperator = operators[i]
+            -- Find the recoil preset for the selected operator
+            for j, recoilpreset in ipairs(recoilpresets) do
+                if recoilpreset.description == selectedOperator then
+                    selectedRecoil = recoilpreset
+                    OutputLogMessage
+                    (
+                        "Operator: " .. selectedRecoil.description .. "\n" ..
+                        "Strength: " .. selectedRecoil.strength .. "\n" ..
+                        "Horizontal Strength: " .. selectedRecoil.horizontalstrength .. "\n" ..
+                        "Duration: " .. selectedRecoil.duration .. "\n"
+                    )
+                    break
+                end
             end
+            return selectedRecoil
         end
     end
     return nil
@@ -146,9 +154,9 @@ end
 function OnEvent(event, arg)
     if IsModifierPressed("alt") and IsModifierPressed("ctrl") then
         if IsMouseButtonPressed(1) then
-            selectedOperator = OperatorSelector(atts)
+            selectedOperator = OperatorSelector(attackers)
         elseif IsMouseButtonPressed(3) then
-            selectedOperator = OperatorSelector(deffs)
+            selectedOperator = OperatorSelector(defenders)
         end
     end
 
